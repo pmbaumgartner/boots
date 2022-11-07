@@ -9,8 +9,12 @@ This is a tiny library for doing bootstrap sampling and estimating. It pulls tog
 **Install**
 
 ```bash
-pip install boots
+pip install git+https://github.com/pmbaumgartner/boots
 ```
+
+> No PyPI?
+
+I'm working on it. The `vose` dependency is also not on PyPI, and packages uploaded to PyPI can't have git dependencies.
 
 ## Example
 
