@@ -43,7 +43,28 @@ def bootstrap(
     n_jobs: int = -1,
     bayesian: bool = False,
     scale: int = 1,
-):
+) -> List[float]:
+    """Perform bootstrap sampling on `data`, by calling the `statistic` function
+    on the data for `n_iterations`.
+
+    Args:
+        data (List[Any]): The input data to calculate the statistic from.
+        statistic (Callable[[List[Any]], float]): The statistic to calculate
+          from given `data`.
+        n_iterations (int): How many iterations to perform sampling.
+        seed (int): Random seed for resampling.
+        n_jobs (int, optional): Number of parallel jobs for sampling. -1 uses all
+            available cores. Defaults to -1.
+        bayesian (bool, optional): Perform the bayesian boostrap by sampling from a
+            dirichlet prior with α=4.0 to determine sample weights. Defaults to False.
+        scale (int, optional): Ratio to oversample, which can be useful when `data` has
+            rare events that can cause errors in calculating `statistic`. WARNING: Increasing
+            this value leads to false additional precision in the bootstrap distribution.
+            Defaults to 1.
+
+    Returns:
+        List[float]: Bootstrap samples of the statistic with length `n_iterations`
+    """
     resampler = resample_dirichlet if bayesian else resample
     result = Parallel(n_jobs=n_jobs)(
         delayed(estimate)(resampler, statistic, data, seed=seed + i, scale=scale)

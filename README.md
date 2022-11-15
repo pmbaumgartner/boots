@@ -1,4 +1,4 @@
-# Boots - A Tiny Bootstrapping Library
+# 🥾 Boots 👢 - A Tiny Bootstrapping Library
 
 This is a tiny library for doing bootstrap sampling and estimating. It pulls together various tricks to make the process as fast and painless as possible. The tricks included are:
 
@@ -9,16 +9,19 @@ This is a tiny library for doing bootstrap sampling and estimating. It pulls tog
 **Install**
 
 ```bash
-pip install git+https://github.com/pmbaumgartner/boots
+pip install boots
 ```
 
-> No PyPI?
+For development:
 
-I'm working on it. The `vose` dependency is also not on PyPI, and packages uploaded to PyPI can't have git dependencies.
+```bash
+pip install git+https://github.com/pmbaumgartner/boots
+```
 
 ## Example
 
 ```python
+from boots import bootstrap
 import numpy as np
 
 x = np.random.pareto(2, 100)

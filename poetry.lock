@@ -445,23 +445,16 @@ python-versions = ">=3.7"
 [[package]]
 name = "vose"
 version = "0.0.1"
-description = ""
+description = "Cython implementation of Vose's Alias method."
 category = "main"
 optional = false
 python-versions = ">=3.6"
-develop = false
 
 [package.dependencies]
 numpy = "*"
 
 [package.extras]
 dev = ["pytest", "scipy"]
-
-[package.source]
-type = "git"
-url = "https://github.com/MaxHalford/vose.git"
-reference = "a72ee6540c0d5b21158340d377ca5f11dc5ffb67"
-resolved_reference = "a72ee6540c0d5b21158340d377ca5f11dc5ffb67"
 
 [[package]]
 name = "wcwidth"
@@ -474,7 +467,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "8a46fd271b02fd4e681b4e3193ebacbc87d968bda757f2d0566779b79159e5e7"
+content-hash = "8b8b9f5d0627bbc4ae756fa26dbf08d286dca9746b989829ccdd56db11e6096f"
 
 [metadata.files]
 appnope = [
@@ -699,7 +692,10 @@ typing-extensions = [
     {file = "typing_extensions-4.4.0-py3-none-any.whl", hash = "sha256:16fa4864408f655d35ec496218b85f79b3437c829e93320c7c9215ccfd92489e"},
     {file = "typing_extensions-4.4.0.tar.gz", hash = "sha256:1511434bb92bf8dd198c12b1cc812e800d4181cfcb867674e0f8279cc93087aa"},
 ]
-vose = []
+vose = [
+    {file = "vose-0.0.1-cp311-cp311-macosx_12_0_arm64.whl", hash = "sha256:80f81322c5a8927b803a6846d5762a59318ae2d55d15a92cc7c0fe43c11100da"},
+    {file = "vose-0.0.1.tar.gz", hash = "sha256:36108cd1ab23bfefcf00e06e609adc37a7ff9781d31bba2b9469998b35a290f5"},
+]
 wcwidth = [
     {file = "wcwidth-0.2.5-py2.py3-none-any.whl", hash = "sha256:beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784"},
     {file = "wcwidth-0.2.5.tar.gz", hash = "sha256:c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83"},

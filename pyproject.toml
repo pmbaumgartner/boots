@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "boots"
-version = "0.1.0"
+version = "0.1.2"
 description = "A tiny statistical bootstraping library."
 authors = ["Peter Baumgartner <5107405+pmbaumgartner@users.noreply.github.com>"]
 readme = "README.md"
@@ -9,8 +9,8 @@ packages = [{include = "boots", from = "src"}]
 [tool.poetry.dependencies]
 python = "^3.8"
 numpy = "^1.23.4"
-vose = {git = "https://github.com/MaxHalford/vose.git", rev = "a72ee6540c0d5b21158340d377ca5f11dc5ffb67"}
 joblib = "^1.2.0"
+vose = "^0.0.1"
 
 
 [tool.poetry.group.dev.dependencies]
